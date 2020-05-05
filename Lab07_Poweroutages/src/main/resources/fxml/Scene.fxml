@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
-
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.poweroutages.FXMLController">
    <top>
@@ -17,4 +24,24 @@
          </font>
       </Label>
    </top>
+   <center>
+      <AnchorPane prefHeight="299.0" prefWidth="539.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox />
+            <ImageView fx:id="txtImage" fitHeight="260.0" fitWidth="351.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@mappaA.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="296.0" layoutY="20.0" prefHeight="28.0" prefWidth="65.0" text="Select NERC" />
+            <ChoiceBox fx:id="txtChoice" layoutX="380.0" layoutY="22.0" prefWidth="57.0" />
+            <Label layoutX="300.0" layoutY="86.0" prefHeight="17.0" prefWidth="69.0" text="Max Years" />
+            <TextField fx:id="txtInsertYears" layoutX="381.0" layoutY="82.0" prefHeight="25.0" prefWidth="57.0" />
+            <Label layoutX="300.0" layoutY="144.0" text="Max Hours" />
+            <TextField fx:id="txtInsertHours" layoutX="381.0" layoutY="140.0" prefHeight="25.0" prefWidth="57.0" />
+            <Button layoutX="410.0" layoutY="208.0" mnemonicParsing="false" onAction="#doCalcola" text="Worst Case Analysis" />
+            <TextArea fx:id="txtResult" layoutX="54.0" layoutY="267.0" prefHeight="164.0" prefWidth="560.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="267.0" />
+         </children>
+      </AnchorPane>
+   </center>
 </BorderPane>
